@@ -153,10 +153,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="430" height="56.333332061767578"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Data" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5iT-Nt-9Ed" userLabel="genreField">
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Data" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="5iT-Nt-9Ed" userLabel="genreField">
                                                     <rect key="frame" x="20" y="11" width="390" height="34.333333333333336"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="yes" returnKeyType="next"/>
                                                     <connections>
                                                         <action selector="anyTapForCheckSaveButton:" destination="UjS-wK-9HH" eventType="editingDidEnd" id="xSW-W4-iQk"/>
                                                     </connections>
@@ -184,7 +184,7 @@
                                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Data" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9np-Am-86c" userLabel="lengthField">
                                                     <rect key="frame" x="20" y="11" width="390" height="34.333333333333336"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                                     <connections>
                                                         <action selector="anyTapForCheckSaveButton:" destination="UjS-wK-9HH" eventType="editingDidEnd" id="DXr-Dw-AtN"/>
                                                     </connections>
@@ -229,14 +229,14 @@
                             <tableViewSection id="sO7-Q0-5qk">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Lrx-fQ-6Qx">
-                                        <rect key="frame" x="0.0" y="564.33332633972168" width="430" height="57"/>
+                                        <rect key="frame" x="0.0" y="564.33332633972168" width="430" height="57.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lrx-fQ-6Qx" id="sxs-KI-A08">
-                                            <rect key="frame" x="0.0" y="0.0" width="430" height="57"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="430" height="57.333332061767578"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" role="destructive" translatesAutoresizingMaskIntoConstraints="NO" id="Nq0-C9-gwc">
-                                                    <rect key="frame" x="20" y="11" width="390" height="35"/>
+                                                    <rect key="frame" x="20" y="11" width="390" height="35.333333333333336"/>
                                                     <buttonConfiguration key="configuration" style="filled" title="Close  " titleAlignment="center"/>
                                                     <connections>
                                                         <action selector="pressedCloseAction:" destination="UjS-wK-9HH" eventType="touchUpInside" id="cmh-VE-Dq9"/>
