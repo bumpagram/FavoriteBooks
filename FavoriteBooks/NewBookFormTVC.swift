@@ -43,15 +43,14 @@ class NewBookFormTVC: UITableViewController, UITextFieldDelegate {
 
     
     @IBAction func pressedSaveButton(_ sender: UIButton) {
-        //print("-before gard")
         guard let title = titleField.text, let author = authorField.text, let genre = genreField.text, let length = lengthField.text  else {return}
         guard title != "", author != "", genre != "", length != "" else {return}  // второй гард, тк получается можно создавать экземпляры с пустыми полями
         newBook = Book(title: title, author: author, genre: genre, length: length)
-        performSegue(withIdentifier: "manualUnwindSeg", sender: self)
+        performSegue(withIdentifier: "saveButtonUnwind", sender: self)
     }
     
     @IBAction func pressedCloseAction(_ sender: UIButton) {
-        performSegue(withIdentifier: "manualUnwindSeg", sender: self)
+        performSegue(withIdentifier: "cancelUnwind", sender: self)
     }
     
     @IBAction func hideKeyboard(_ sender: UITapGestureRecognizer) {

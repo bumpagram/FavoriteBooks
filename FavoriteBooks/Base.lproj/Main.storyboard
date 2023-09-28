@@ -270,7 +270,8 @@
                         <outlet property="lengthField" destination="9np-Am-86c" id="bnx-ni-1Bl"/>
                         <outlet property="saveButton" destination="hgT-t6-UH8" id="e38-rl-gEn"/>
                         <outlet property="titleField" destination="0CE-QX-5Y3" id="jVf-53-rI8"/>
-                        <segue destination="Vu1-gh-YT4" kind="unwind" identifier="manualUnwindSeg" unwindAction="prepareForUnwindWithSegue:" id="UEN-8S-lPv"/>
+                        <segue destination="Vu1-gh-YT4" kind="unwind" identifier="cancelUnwind" unwindAction="prepareForUnwindWithSegue:" id="UEN-8S-lPv"/>
+                        <segue destination="Vu1-gh-YT4" kind="unwind" identifier="saveButtonUnwind" unwindAction="prepareForUnwindWithSegue:" id="dho-eD-xff"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xdh-ds-GY4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

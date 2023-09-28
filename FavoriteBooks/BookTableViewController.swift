@@ -62,6 +62,8 @@ class BookTableViewController: UITableViewController {
     // MARK: - Navigation
     
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {
+        guard segue.identifier != "cancelUnwind" else {return} // если нажали кнопку Close, то ничего не делать
+
         guard let source = segue.source as? NewBookFormTVC,
               let book = source.newBook else {return}
         
@@ -70,7 +72,6 @@ class BookTableViewController: UITableViewController {
             books.insert(book, at: indexPath.row)
             tableView.deselectRow(at: indexPath, animated: true)
         } else {
-            guard segue.identifier != "manualUnwindSeg" else {return}  // если нажали кнопку Close, то ничего не делать
             books.append(book)
             tableView.reloadData() // строка в этом месте оперативно обновляет экраны
         }
@@ -80,13 +81,12 @@ class BookTableViewController: UITableViewController {
         if segue.identifier == "showDetail" {
             guard let willPerform = segue.destination as? NewBookFormTVC else {return}
             let pressedCell = sender as? Book
-            //print(pressedCell ?? "got nil at pressedCell")  // просто дебаг и наблюдаем
             willPerform.newBook = pressedCell // передаем в VC форму в проперти newBook нажатую ячейку-сущность, иначе потом гард не пробивается
         }
     }
     
     
-    @IBSegueAction func editBook(_ coder: NSCoder, sender: Any?) -> NewBookFormTVC? {
+    @IBSegueAction func editBook(_ coder: NSCoder, sender: Any?) -> NewBookFormTVC? {  
         let elementToEdit: Book?
         
         guard let cell = sender as? UITableViewCell, let indexpath = tableView.indexPath(for: cell) else {
