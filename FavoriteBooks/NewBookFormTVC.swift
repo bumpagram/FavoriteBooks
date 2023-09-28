@@ -46,15 +46,15 @@ class NewBookFormTVC: UITableViewController {
 
     
     @IBAction func pressedSaveButton(_ sender: UIButton) {
-        print("-before gard")
+        //print("-before gard")
         guard let title = titleField.text, let author = authorField.text, let genre = genreField.text, let length = lengthField.text  else {return}
-        print("-after gard")
-        print("--- before init")
-        print("title is empty? - \(title.isEmpty), count = \(title.count)")
+        //print("-after gard")
+        //print("--- before init")
+        //print("title is empty? - \(title.isEmpty), count = \(title.count)")
         newBook = Book(title: title, author: author, genre: genre, length: length)
-        print("--- after init,- ", newBook)
-        print("title is empty? - \(title.isEmpty), count = \(title.count)")
-        print(title == nil)
+        //print("--- after init,- ", newBook)
+        //print("title is empty? - \(title.isEmpty), count = \(title.count)")
+        //print(title == nil)
         performSegue(withIdentifier: "manualUnwindSeg", sender: self)
     }
     
