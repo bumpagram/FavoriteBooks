@@ -81,21 +81,18 @@ class NewBookFormTVC: UITableViewController, UITextFieldDelegate {
         case self.titleField : authorField.becomeFirstResponder()
         case self.authorField : genreField.becomeFirstResponder()
         case self.genreField : lengthField.becomeFirstResponder()
-
         default : print("got event: Return pressed")
-        
         }
-        
         return true
     }
-    
-    
     
     func allDelegate() {
         self.titleField.delegate = self
         self.authorField.delegate = self
         self.genreField.delegate = self
     }
+    
+    
     /*
     // MARK: - Navigation
 
