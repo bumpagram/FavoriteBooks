@@ -2,7 +2,9 @@ import UIKit
 
 class BookTableViewController: UITableViewController {
     
-    var books: [Book] = []
+    var books: [Book] = [
+    Book(title: "Harry Potter", author: "Joan Roling", genre: "fantastic", length: "355")
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -10,7 +12,7 @@ class BookTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+        super.viewWillAppear(true)
         
         tableView.reloadData()
     }
@@ -36,8 +38,9 @@ class BookTableViewController: UITableViewController {
     // MARK: - Navigation
     
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {
-        guard let source = segue.source as? BookFormViewController,
-            let book = source.book else {return}
+        print("start prepareForUnwind")
+        guard let source = segue.source as? NewBookFormTVC,
+              let book = source.newBook else {return}
         
         if let indexPath = tableView.indexPathForSelectedRow {
             books.remove(at: indexPath.row)
@@ -45,19 +48,25 @@ class BookTableViewController: UITableViewController {
             tableView.deselectRow(at: indexPath, animated: true)
         } else {
             books.append(book)
+            print("after books array append")
+            print(books)
+            print("-force table reload-")
+            tableView.reloadData() // строка в этом месте оперативно обновляет экраны
         }
     }
     
-    @IBSegueAction func editBook(_ coder: NSCoder, sender: Any?) -> BookFormViewController? {
+    @IBSegueAction func editBook(_ coder: NSCoder, sender: Any?) -> NewBookFormTVC? {
+        let elementToEdit: Book?
         
         guard let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) else {
             return nil
         }
-        
-        let book = books[indexPath.row]
-        
-        return BookFormViewController(coder: coder, book: book)
+         elementToEdit = books[indexPath.row]
+        return NewBookFormTVC(coder: coder, newBook: elementToEdit)
     }
     
+  
     
-}
+    
+    
+} // ViewController end

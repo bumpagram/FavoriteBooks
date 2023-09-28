@@ -46,7 +46,6 @@
 		188F675D23AC01B0007E2064 = {
 			isa = PBXGroup;
 			children = (
-				5A93165D2AC1E2590081184C /* NewBookFormTVC.swift */,
 				188F676823AC01B0007E2064 /* FavoriteBooks */,
 				188F676723AC01B0007E2064 /* Products */,
 			);
@@ -72,6 +71,7 @@
 				188F677223AC01B1007E2064 /* Assets.xcassets */,
 				188F677423AC01B1007E2064 /* LaunchScreen.storyboard */,
 				188F676F23AC01B0007E2064 /* Main.storyboard */,
+				5A93165D2AC1E2590081184C /* NewBookFormTVC.swift */,
 			);
 			path = FavoriteBooks;
 			sourceTree = "<group>";
