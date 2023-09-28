@@ -50,6 +50,10 @@ class NewBookFormTVC: UITableViewController, UITextFieldDelegate {
     }
     
     @IBAction func pressedCloseAction(_ sender: UIButton) {
+        titleField.text = nil
+        authorField.text = nil
+        genreField.text = nil
+        lengthField.text = nil
         performSegue(withIdentifier: "cancelUnwind", sender: self)
     }
     
