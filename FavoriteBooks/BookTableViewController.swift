@@ -45,6 +45,12 @@ class BookTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
+    
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let movedItem = books.remove(at: sourceIndexPath.row)  // взять с массива элемент под индексом на который ткнул юзер
+        books.insert(movedItem, at: destinationIndexPath.row)  // вставить в массив на конкретную позицию ранее выдернутый элемент
+    }
+    
 
     // MARK: - Navigation
     
