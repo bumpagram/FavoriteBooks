@@ -70,6 +70,7 @@ class BookTableViewController: UITableViewController {
             books.insert(book, at: indexPath.row)
             tableView.deselectRow(at: indexPath, animated: true)
         } else {
+            guard segue.identifier != "manualUnwindSeg" else {return}  // если нажали кнопку Close, то ничего не делать
             books.append(book)
             tableView.reloadData() // строка в этом месте оперативно обновляет экраны
         }

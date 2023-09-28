@@ -83,7 +83,7 @@
             <objects>
                 <tableViewController id="UjS-wK-9HH" customClass="NewBookFormTVC" customModule="FavoriteBooks" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="aCG-uQ-sFX">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
@@ -212,7 +212,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgT-t6-UH8">
                                                     <rect key="frame" x="184.66666666666666" y="4.3333333333333321" width="61" height="35"/>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Save" titleAlignment="center"/>
                                                     <connections>
                                                         <action selector="pressedSaveButton:" destination="UjS-wK-9HH" eventType="touchUpInside" id="WxC-YP-7NC"/>
                                                     </connections>
@@ -221,6 +221,36 @@
                                             <constraints>
                                                 <constraint firstItem="hgT-t6-UH8" firstAttribute="centerY" secondItem="DxC-1V-DHa" secondAttribute="centerY" id="bGj-Gf-XgK"/>
                                                 <constraint firstItem="hgT-t6-UH8" firstAttribute="centerX" secondItem="DxC-1V-DHa" secondAttribute="centerX" id="jeD-Zt-ChL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="sO7-Q0-5qk">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Lrx-fQ-6Qx">
+                                        <rect key="frame" x="0.0" y="564.33332633972168" width="430" height="57"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lrx-fQ-6Qx" id="sxs-KI-A08">
+                                            <rect key="frame" x="0.0" y="0.0" width="430" height="57"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" role="destructive" translatesAutoresizingMaskIntoConstraints="NO" id="Nq0-C9-gwc">
+                                                    <rect key="frame" x="20" y="11" width="390" height="35"/>
+                                                    <buttonConfiguration key="configuration" style="filled" title="Close  " titleAlignment="center"/>
+                                                    <connections>
+                                                        <action selector="pressedCloseAction:" destination="UjS-wK-9HH" eventType="touchUpInside" id="cmh-VE-Dq9"/>
+                                                        <action selector="pressedSaveButton:" destination="UjS-wK-9HH" eventType="touchUpInside" id="tZF-s2-fq1"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Nq0-C9-gwc" secondAttribute="bottom" id="2hy-ED-GZJ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Nq0-C9-gwc" secondAttribute="trailing" id="4qj-ZO-rbK"/>
+                                                <constraint firstItem="Nq0-C9-gwc" firstAttribute="centerY" secondItem="sxs-KI-A08" secondAttribute="centerY" id="D0B-Kc-cjr"/>
+                                                <constraint firstItem="Nq0-C9-gwc" firstAttribute="leading" secondItem="sxs-KI-A08" secondAttribute="leadingMargin" id="pE3-bb-28a"/>
+                                                <constraint firstItem="Nq0-C9-gwc" firstAttribute="top" secondItem="sxs-KI-A08" secondAttribute="topMargin" id="xon-IV-ibc"/>
+                                                <constraint firstItem="Nq0-C9-gwc" firstAttribute="centerX" secondItem="sxs-KI-A08" secondAttribute="centerX" id="yXU-d5-e4u"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -255,7 +285,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9vk-OP-9Gb"/>
+        <segue reference="CFR-jL-f2v"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">

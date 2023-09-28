@@ -48,6 +48,9 @@ class NewBookFormTVC: UITableViewController {
         performSegue(withIdentifier: "manualUnwindSeg", sender: self)
     }
     
+    @IBAction func pressedCloseAction(_ sender: UIButton) {
+        performSegue(withIdentifier: "manualUnwindSeg", sender: self)
+    }
     
     @IBAction func hideKeyboard(_ sender: UITapGestureRecognizer) {
         titleField.resignFirstResponder()
