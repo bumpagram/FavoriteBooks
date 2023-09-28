@@ -4,7 +4,8 @@
 
 import UIKit
 
-class NewBookFormTVC: UITableViewController {
+class NewBookFormTVC: UITableViewController, UITextFieldDelegate {
+    // бахнул сюда UITextFieldDelegate чтобы снимать через метод нажатия на Return для перехода к след. полю
     
     @IBOutlet var titleField: UITextField!
     @IBOutlet var authorField: UITextField!
@@ -28,6 +29,7 @@ class NewBookFormTVC: UITableViewController {
         super.viewDidLoad()
         updateSaveButtonVisualState() // вызываем статус кнопки до проброса полей, ибо юзер ничего не менял ещё, по умолчанию сохранять нечего.
         updateView()
+        allDelegate() // кастомный для экономии места
     }
     
     
@@ -74,7 +76,26 @@ class NewBookFormTVC: UITableViewController {
         saveButton.isEnabled = result //  true должно быть только в том 1 случае, когда все поля НЕ Empty
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case self.titleField : authorField.becomeFirstResponder()
+        case self.authorField : genreField.becomeFirstResponder()
+        case self.genreField : lengthField.becomeFirstResponder()
+
+        default : print("got event: Return pressed")
+        
+        }
+        
+        return true
+    }
     
+    
+    
+    func allDelegate() {
+        self.titleField.delegate = self
+        self.authorField.delegate = self
+        self.genreField.delegate = self
+    }
     /*
     // MARK: - Navigation
 
