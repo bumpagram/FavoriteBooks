@@ -101,6 +101,9 @@
                                                     <rect key="frame" x="20" y="11" width="390" height="34.333333333333336"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="anyTapForCheckSaveButton:" destination="UjS-wK-9HH" eventType="editingChanged" id="JcN-TL-JUK"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -126,6 +129,9 @@
                                                     <rect key="frame" x="20" y="11" width="390" height="34.333333333333336"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="anyTapForCheckSaveButton:" destination="UjS-wK-9HH" eventType="editingDidEnd" id="MBJ-X6-CaT"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -151,6 +157,9 @@
                                                     <rect key="frame" x="20" y="11" width="390" height="34.333333333333336"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="anyTapForCheckSaveButton:" destination="UjS-wK-9HH" eventType="editingDidEnd" id="xSW-W4-iQk"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -176,6 +185,9 @@
                                                     <rect key="frame" x="20" y="11" width="390" height="34.333333333333336"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="anyTapForCheckSaveButton:" destination="UjS-wK-9HH" eventType="editingDidEnd" id="DXr-Dw-AtN"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
