@@ -26,7 +26,7 @@ class NewBookFormTVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        updateSaveButtonVisualState() // вызываем статус кнопки до проброса полей, ибо юзер ничего не менял ещё, по умолчанию сохранять нечего.
         updateView()
     }
     
@@ -44,7 +44,6 @@ class NewBookFormTVC: UITableViewController {
         //print("-before gard")
         guard let title = titleField.text, let author = authorField.text, let genre = genreField.text, let length = lengthField.text  else {return}
         guard title != "", author != "", genre != "", length != "" else {return}  // второй гард, тк получается можно создавать экземпляры с пустыми полями
-        
         newBook = Book(title: title, author: author, genre: genre, length: length)
         performSegue(withIdentifier: "manualUnwindSeg", sender: self)
     }
@@ -58,6 +57,19 @@ class NewBookFormTVC: UITableViewController {
     }
     
   
+    @IBAction func anyTapForCheckSaveButton(_ sender: UITextField) {
+        updateSaveButtonVisualState()
+    }
+    
+    func updateSaveButtonVisualState() {
+       guard let titleState = titleField.text,
+             let authorState = authorField.text,
+             let genreState = genreField.text,
+             let lengthState = lengthField.text else {return}
+                
+        let result = (!titleState.isEmpty) && (!authorState.isEmpty) && (!genreState.isEmpty) && (!lengthState.isEmpty)
+        saveButton.isEnabled = result //  true должно быть только в том 1 случае, когда все поля НЕ Empty
+    }
     
     
     /*

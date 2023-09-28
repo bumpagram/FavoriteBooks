@@ -3,7 +3,7 @@ import UIKit
 class BookTableViewController: UITableViewController {
     
     var books: [Book] = [
-    Book(title: "Harry Potter", author: "Joan Roling", genre: "fantastic", length: "355")
+    Book(title: "Harry Potter", author: "Joan Rolling", genre: "fantastic", length: "355")
     ]
     
     override func viewDidLoad() {
