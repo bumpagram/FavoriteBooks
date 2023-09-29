@@ -1,6 +1,6 @@
 //  DetailsFormTVC.swift
 //  FavoriteBooks
-//  Created by .b[u]mpagram on 9/25/23.
+//  Created by .b[u]mpagram on 9/25/23
 
 import UIKit
 
