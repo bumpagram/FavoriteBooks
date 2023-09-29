@@ -3,7 +3,7 @@ import UIKit
 class BooksListVC: UITableViewController {
     
     var books: [Book] = ArrayAllBooks
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,14 +25,10 @@ class BooksListVC: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BookCell", for: indexPath)
-
-        let book = books[indexPath.row]
-        var content = cell.defaultContentConfiguration()
-        content.text = book.title
-        content.secondaryText = book.description
-        cell.contentConfiguration = content
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BookCell", for: indexPath) as! CustomTableViewCell 
+        //дописал только as! CustomTableViewCell для форс даункаста. Будем юзать метод из класса ячейки
+        let tappedBook = books[indexPath.row]
+        cell.updateThisCell(with: tappedBook)
         return cell
     }
     
@@ -60,7 +56,7 @@ class BooksListVC: UITableViewController {
     
 
     // MARK: - Navigation
-    // экшен подключен и работает //
+    // экшен подключен и работает
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {
         guard segue.identifier != "cancelUnwind" else {return} // если нажали кнопку Close, то ничего не делать
 
@@ -87,7 +83,7 @@ class BooksListVC: UITableViewController {
     }
     
     
-    // тут хз работает ли, не помню уже //
+    // тут хз работает ли, не помню уже
     @IBSegueAction func editBook(_ coder: NSCoder, sender: Any?) -> DetailsFormTVC? {
         let elementToEdit: Book?
         
