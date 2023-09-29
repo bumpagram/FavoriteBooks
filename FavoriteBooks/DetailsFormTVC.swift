@@ -12,6 +12,7 @@ class DetailsFormTVC: UITableViewController, UITextFieldDelegate {
     @IBOutlet var genreField: UITextField!
     @IBOutlet var lengthField: UITextField!
     @IBOutlet var saveButton: UIButton!
+    @IBOutlet var allFields: [UITextField]!  // чтобы кода меньше было загнал в массив IB
     
     var newBook: Book?
     
@@ -24,7 +25,6 @@ class DetailsFormTVC: UITableViewController, UITextFieldDelegate {
         super.init(coder: coder)
     }
     
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,18 +51,16 @@ class DetailsFormTVC: UITableViewController, UITextFieldDelegate {
     }
     
     @IBAction func pressedCloseAction(_ sender: UIButton) {
-        titleField.text = nil
-        authorField.text = nil
-        genreField.text = nil
-        lengthField.text = nil
+        for textField in allFields {
+            textField.text = nil
+        }
         performSegue(withIdentifier: "cancelUnwind", sender: self)
     }
     
     @IBAction func hideKeyboard(_ sender: UITapGestureRecognizer) {
-        titleField.resignFirstResponder()
-        authorField.resignFirstResponder()
-        genreField.resignFirstResponder()
-        lengthField.resignFirstResponder()
+        for textField in allFields {
+            textField.resignFirstResponder()
+        }
     }
     
   
@@ -97,13 +95,5 @@ class DetailsFormTVC: UITableViewController, UITextFieldDelegate {
     }
     
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-}
+    
+} // TableViewController end

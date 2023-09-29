@@ -229,14 +229,14 @@
                             <tableViewSection id="sO7-Q0-5qk">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Lrx-fQ-6Qx">
-                                        <rect key="frame" x="0.0" y="564.33332633972168" width="430" height="57"/>
+                                        <rect key="frame" x="0.0" y="564.33332633972168" width="430" height="57.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lrx-fQ-6Qx" id="sxs-KI-A08">
-                                            <rect key="frame" x="0.0" y="0.0" width="430" height="57"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="430" height="57.333332061767578"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" role="destructive" translatesAutoresizingMaskIntoConstraints="NO" id="Nq0-C9-gwc">
-                                                    <rect key="frame" x="20" y="11" width="390" height="35"/>
+                                                    <rect key="frame" x="20" y="11" width="390" height="35.333333333333336"/>
                                                     <buttonConfiguration key="configuration" style="filled" title="Close  " titleAlignment="center"/>
                                                     <connections>
                                                         <action selector="pressedCloseAction:" destination="UjS-wK-9HH" eventType="touchUpInside" id="cmh-VE-Dq9"/>
@@ -270,6 +270,10 @@
                         <outlet property="lengthField" destination="9np-Am-86c" id="bnx-ni-1Bl"/>
                         <outlet property="saveButton" destination="hgT-t6-UH8" id="e38-rl-gEn"/>
                         <outlet property="titleField" destination="0CE-QX-5Y3" id="jVf-53-rI8"/>
+                        <outletCollection property="allFields" destination="0CE-QX-5Y3" collectionClass="NSMutableArray" id="i2w-QN-oJS"/>
+                        <outletCollection property="allFields" destination="V4w-Fd-fvb" collectionClass="NSMutableArray" id="dSr-8f-R5N"/>
+                        <outletCollection property="allFields" destination="5iT-Nt-9Ed" collectionClass="NSMutableArray" id="uMd-OI-3pt"/>
+                        <outletCollection property="allFields" destination="9np-Am-86c" collectionClass="NSMutableArray" id="kLt-zO-Rab"/>
                         <segue destination="Vu1-gh-YT4" kind="unwind" identifier="cancelUnwind" unwindAction="prepareForUnwindWithSegue:" id="UEN-8S-lPv"/>
                         <segue destination="Vu1-gh-YT4" kind="unwind" identifier="saveButtonUnwind" unwindAction="prepareForUnwindWithSegue:" id="dho-eD-xff"/>
                     </connections>
