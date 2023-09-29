@@ -1,6 +1,6 @@
 import UIKit
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+class SceneDelegate: UIResponder, UIWindowSceneDelegate {    // NO CHANGES //
 
     var window: UIWindow?
 

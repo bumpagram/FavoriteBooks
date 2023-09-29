@@ -1,10 +1,10 @@
-//  NewBookFormTVC.swift
+//  DetailsFormTVC.swift
 //  FavoriteBooks
-//  Created by Denis Azarkov on 9/25/23.
+//  Created by .b[u]mpagram on 9/25/23.
 
 import UIKit
 
-class NewBookFormTVC: UITableViewController, UITextFieldDelegate {
+class DetailsFormTVC: UITableViewController, UITextFieldDelegate {
     // бахнул сюда UITextFieldDelegate чтобы снимать через метод нажатия на Return для перехода к след. полю
     
     @IBOutlet var titleField: UITextField!
@@ -25,6 +25,7 @@ class NewBookFormTVC: UITableViewController, UITextFieldDelegate {
     }
     
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateSaveButtonVisualState() // вызываем статус кнопки до проброса полей, ибо юзер ничего не менял ещё, по умолчанию сохранять нечего.

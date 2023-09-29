@@ -11,7 +11,7 @@
         <!--Favorite Books-->
         <scene sceneID="TVC-F1-62j">
             <objects>
-                <tableViewController id="biM-c4-dvR" customClass="BookTableViewController" customModule="FavoriteBooks" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="biM-c4-dvR" customClass="BooksListVC" customModule="FavoriteBooks" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="W5d-kn-Q9e">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,12 +78,12 @@
             </objects>
             <point key="canvasLocation" x="-730" y="366"/>
         </scene>
-        <!--New Book FormTVC-->
+        <!--Details FormTVC-->
         <scene sceneID="JJc-5c-Z3Z">
             <objects>
-                <tableViewController id="UjS-wK-9HH" customClass="NewBookFormTVC" customModule="FavoriteBooks" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="UjS-wK-9HH" customClass="DetailsFormTVC" customModule="FavoriteBooks" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="aCG-uQ-sFX">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
@@ -229,14 +229,14 @@
                             <tableViewSection id="sO7-Q0-5qk">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Lrx-fQ-6Qx">
-                                        <rect key="frame" x="0.0" y="564.33332633972168" width="430" height="57.333332061767578"/>
+                                        <rect key="frame" x="0.0" y="564.33332633972168" width="430" height="57"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lrx-fQ-6Qx" id="sxs-KI-A08">
-                                            <rect key="frame" x="0.0" y="0.0" width="430" height="57.333332061767578"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="430" height="57"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" role="destructive" translatesAutoresizingMaskIntoConstraints="NO" id="Nq0-C9-gwc">
-                                                    <rect key="frame" x="20" y="11" width="390" height="35.333333333333336"/>
+                                                    <rect key="frame" x="20" y="11" width="390" height="35"/>
                                                     <buttonConfiguration key="configuration" style="filled" title="Close  " titleAlignment="center"/>
                                                     <connections>
                                                         <action selector="pressedCloseAction:" destination="UjS-wK-9HH" eventType="touchUpInside" id="cmh-VE-Dq9"/>
@@ -286,7 +286,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="CFR-jL-f2v"/>
+        <segue reference="9vk-OP-9Gb"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">

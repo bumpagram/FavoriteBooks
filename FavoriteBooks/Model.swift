@@ -10,3 +10,14 @@ struct Book: CustomStringConvertible {
         return "\(title) is written by \(author) in the \(genre) genre and is \(length) pages long"
     }
 }
+
+
+
+
+
+var ArrayAllBooks: [Book] = [
+    
+    Book(title: "Harry Potter", author: "Joan Rolling", genre: "fantastic", length: "355")
+
+]
+
